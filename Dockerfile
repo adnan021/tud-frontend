@@ -4,7 +4,8 @@ WORKDIR /app
 COPY . .
 # ==== BUILD =====
 # Install dependencies (npm ci makes sure the exact versions in the lockfile gets installed)
-RUN npm ci 
+RUN npm ci
+RUN npm install serve@14.1.2 
 # Build the app
 RUN npm run build
 # ==== RUN =======
